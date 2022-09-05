@@ -28,7 +28,7 @@ mongoose.connect(process.env.DATABASE, { //process attach all the new dependenci
 //Middlewares
 app.use(bodyParser.json());
 app.use(cookieParser());//is used to put token in cookie
-app.use(cors());//TODO: will be explained later
+app.use(cors());
 
 //My Routes
 app.use('/api', authRoutes);//now 'api' needs to be added before all routes in auth file
@@ -39,7 +39,7 @@ app.use('/api', orderRoutes);
 
 
 app.get("/", (req, res)=>{
-    return res.send("Home"); //return not compulsory
+    return res.send("Home");
     });
 
 
